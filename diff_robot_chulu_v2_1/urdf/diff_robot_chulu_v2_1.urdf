@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="diff_robot_chulu_v2_1">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="1.50455504081341E-07 1.47788578496056E-07 -0.0151030876530591"
+        rpy="0 0 0" />
+      <mass
+        value="0.504564249835671" />
+      <inertia
+        ixx="0.000734338638391148"
+        ixy="-6.75102431697225E-20"
+        ixz="2.47895780960543E-10"
+        iyy="0.000725633025312158"
+        iyz="2.45092924297386E-10"
+        izz="0.00138504235733951" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="right_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-1.94382582532725E-19 -0.01 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0676541977950615" />
+      <inertia
+        ixx="2.08811862569563E-05"
+        ixy="6.83802639710503E-23"
+        ixz="6.05332495559249E-22"
+        iyy="3.72520926609085E-05"
+        iyz="5.55865371635635E-22"
+        izz="2.08811862569563E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/right_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/right_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="right_wheel_Joint"
+    type="continuous">
+    <origin
+      xyz="0 -0.065 -0.01175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="right_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="30"
+      velocity="30" />
+  </joint>
+  <link
+    name="left_wheel_Link">
+    <inertial>
+      <origin
+        xyz="-4.87612696953907E-19 0.00999999999999998 0"
+        rpy="0 0 0" />
+      <mass
+        value="0.0676541977950615" />
+      <inertia
+        ixx="2.08811862569563E-05"
+        ixy="-4.41162993361645E-24"
+        ixz="-6.95527924893442E-21"
+        iyy="3.72520926609085E-05"
+        iyz="8.82325986723246E-24"
+        izz="2.08811862569563E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/left_wheel_Link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://diff_robot_chulu_v2_1/meshes/left_wheel_Link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="left_wheel_Joint"
+    type="continuous">
+    <origin
+      xyz="0 0.065 -0.01175"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="left_wheel_Link" />
+    <axis
+      xyz="0 -1 0" />
+    <limit
+      lower="0"
+      upper="0"
+      effort="30"
+      velocity="30" />
+  </joint>
+</robot>
